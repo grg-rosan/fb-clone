@@ -1,0 +1,49 @@
+header{
+width: auto;
+}
+nav{
+    background: rgba(243, 242, 242, 0.884);
+    
+    padding: 1.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-shadow: 2px 0 2px black;
+}
+.fb-links-wrapper{
+    width: 50%;
+    display: flex;
+    justify-content:space-between ;
+}
+.fb-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 2.6rem;
+}
+.icons-wrapper{
+    display: flex;
+    gap: 2.1rem;
+}
+.nav-icons{
+    height: 2.5rem;
+    width: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid black;
+}
+.nav-icons i {
+  width:2rem;  /* icon size */
+  height: 2rem;
+  color: #555; /* default color */
+  transition: all 0.3s ease; /* smooth hover effect */
+}
+
+/* Hover effect */
+.nav-icons:hover {
+  color: #007bff; /* blue hover color */
+  background: rgba(210, 210, 205, 0.605);
+  transform: scale(1.2); /* slight zoom */
+}
