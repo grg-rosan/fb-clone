@@ -1,34 +1,39 @@
 nav {
     width: 100%;
     display: grid;
-    grid-template-columns: 20% auto 20%;
-    padding: 0 .5rem;
-    padding: .7rem 1rem;
-    padding-top: 1.6rem;
-    border-bottom: 1px solid black;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 2rem;
+    padding: .5rem 0;
+    padding-top: 1.3rem;
+    /* border:1px solid black; */
 }
 
 .wrapper {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 1.1rem;
-    padding: 0 0.5rem;
-    /* border: 1px solid black; */
+    justify-content: space-around;
+    border: 1px solid black;
+    /* padding: .5rem 0; */
 }
 
 .nav-icons {
-    display: inline-flex;
+    /* display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: calc(var(--height) + .2rem);
-    height: calc(var(--height) + .2rem);
-    border-radius: 50%;
-    background: rgba(220, 218, 218, 0.627);
+    width: calc(var(--height) + .3rem);
+    height: calc(var(--height) + .3rem);
+    border-radius: .2rem;
     cursor: pointer;
     flex: 0 0 auto;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.2s ease;
 }
 
 .nav-icons:hover {
@@ -36,10 +41,12 @@ nav {
 }
 
 /* style the lucide icon inside the fb-logo */
-.nav-icons i[data-lucide],
-.nav-icons svg {
-    height: 70%;
-    width: 70%;
+.nav-icon i[data-lucide],
+.nav-icon svg {
+  width: 1.5rem;
+  height: .5rem;
+  stroke-width: 2;
+  color: #65676b;
 }
 
 #fb-logo i[data-lucide],
@@ -55,7 +62,7 @@ nav {
     align-items: center;
     gap: 0.5rem;
     background: var(--input-bg);
-    padding: .25rem .5rem;
+    /* padding: .25rem .5rem; */
     border-radius: 2rem;
     height: var(--height);
     flex: 1 1 auto;
@@ -73,7 +80,7 @@ nav {
     font-size: 0.95rem;
     color: #111;
     /* width: 100%; */
-    min-width: 0;
+    /* min-width: 0; */
     /* allow to shrink */
     padding: 0 4px;
 }
@@ -84,22 +91,22 @@ nav {
     opacity: 1;
 }
 
-
 #middle-wrapper {
-    flex: 1;
-    gap: 1rem;
-}
-
-#middle-wrapper .nav-icons {
-    background: none;
-    border-radius: .5rem;
-    width: 10%;
-}
-
-#middle-wrapper .nav-icons:hover {
-    background-color: rgba(187, 179, 179, 0.474);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
 }
 
 #right-wrapper {
-    gap: .5rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: .6rem;
+}
+
+#right-wrapper .nav-icons {
+    background: rgba(220, 218, 218, 0.627);
+    border-radius: 50%;
 }
