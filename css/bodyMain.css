@@ -1,79 +1,24 @@
-main {
-    width: 100%;
+main{
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    gap: 2rem;
-    padding-top: 1rem;
-    background: var(--main-background);
+gap: 1rem;
+height: 100vh;
+    flex: 1;
 }
-
-.menu-item,
-.cont-name {
-    height: 3rem;
-    font: 1rem;
-    width: 95%;
-    display: flex;
-    align-items: center;
-    padding: .5rem .5rem;
-    gap: .9rem;
-    border-radius: .5rem;
-    cursor: pointer;
-}
-
-.menu-item:hover,
-.cont-name:hover {
-    background: var(--hover_background);
-}
-
-.menu-item i {
-    width: 1.3rem;
-    height: 1.3rem;
-}
-
-.profile {
-    width: 1.8rem;
-    height: 1.8rem;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-#top-content {
-    display: flex;
-    align-items: center;
-    gap: .7rem;
-    padding: 0 .5rem;
-}
-
-.item-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: .5rem;
-    border-radius: 50%;
-}
-
-.item-icon:hover {
-    background: var(--hover_background);
-}
-
-.item:first-child {
-    margin-right: auto;
-}
-
-.contacts {
-    padding: 0;
-}
-
-.cont-name {
-    width: 100%;
-}
-
-
 .main-content {
     display: flex;
     flex-direction: column;
     padding: 0 1rem;
     gap: 1rem;
+    height: 100%;
+    overflow-y: scroll; /* content is scrollable */
+  
+  /* hide scrollbar */
+  -ms-overflow-style: none; 
+}
+.main-content::-webkit-scrollbar {
+height: 0;
+width: 0;
 }
 
 .activity {
