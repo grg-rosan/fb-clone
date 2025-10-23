@@ -14,9 +14,15 @@
     <header>
         <nav>
             <div class="wrapper" id="left-wrapper">
-                <div class="left-profiel-icon" id="fb-logo">
-                    <i data-lucide="facebook"></i>
+                <div class="fb-logo">
+                    <svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#1877F2"
+                            d="M36 18a18 18 0 1 0-20.812 17.86v-12.63h-4.69V18h4.69v-3.96c0-4.63 2.76-7.19 6.98-7.19 2.02 0 4.13.36 4.13.36v4.54h-2.33c-2.3 0-3.02 1.43-3.02 2.9V18h5.14l-.82 5.23h-4.32v12.63A18.003 18.003 0 0 0 36 18z" />
+                        <path fill="#fff"
+                            d="M25.18 23.23 26 18h-5.14v-3.35c0-1.47.72-2.9 3.02-2.9h2.33V7.21s-2.11-.36-4.13-.36c-4.22 0-6.98 2.56-6.98 7.19V18h-4.69v5.23h4.69v12.63a18.14 18.14 0 0 0 5.79 0V23.23h4.32z" />
+                    </svg>
                 </div>
+
                 <div class="left-search-bar">
                     <i data-lucide="search"></i>
                     <input type="text" name="userSearch" id="userSearch" placeholder="search facebook">
@@ -60,9 +66,9 @@
         </nav>
     </header>
     <main>
-        <section id="left-sidebar" class="sidebar">
+        <aside id="left-sidebar" class="sidebar">
             <div class="cont-name">
-                <img src="images.png" class="profile" alt="Profile">
+                <img src="./images/images.png" class="profile" alt="Profile">
                 <span>Roshan Gurung</span>
             </div>
             <div class="menu-item"><i data-lucide="bot"></i><span>Meta AI</span></div>
@@ -82,31 +88,64 @@
         <section class="main-content" id="main-content">
             <div class="activity" id="activity">
                 <div class="activity-top">
-                   <div class="input-img">
-                       <img src="images.png" class="profile" alt="Profile">
-                   </div>
+                    <div class="input-img">
+                        <img src="./images/images.png" class="profile" alt="Profile">
+                    </div>
                     <label for="activity-input"></label>
                     <input type="text" id="activity-input" placeholder="what's on your mind">
                 </div>
                 <hr class="divider">
                 <div class="action-btn" id="action-btn">
-                     <div class="activity-item"><i data-lucide="video"></i><span>video</span></div>
-                     <div class="activity-item"><i data-lucide="images"></i><span>images/photos</span></div>
-                     <div class="activity-item"><i data-lucide="smile"></i><span>feeling/activiy</span></div>            
+                    <div class="activity-item"><i data-lucide="video"></i><span>video</span></div>
+                    <div class="activity-item"><i data-lucide="images"></i><span>images/photos</span></div>
+                    <div class="activity-item"><i data-lucide="smile"></i><span>feeling/activiy</span></div>
                 </div>
             </div>
-                <div class="story-section">
-                   <!-- <div class="story-add_icon"> -->
-                    <div class="story-icon"><i data-lucide="plus"></i><span>create story</span></div>
-                    <div class="story-icon"><i data-lucide="plus"></i><span>create story</span></div>
-                    <div class="story-icon"><i data-lucide="plus"></i><span>create story</span></div>
-                   <!-- </div> -->
+            <div class="stories">
+                <div class="story" id="add-story">
+                    <img src="./images/storyimg.jpg" alt="Story 1">
+                    <i data-lucide="plus"></i><span>create story</span>
                 </div>
-                <div id="feed">this id fedd</div>
+                <div class="story">
+                    <img src="./images/storyimg.jpg" alt="Story 2">
+                    <span>Sophia</span>
+                </div>
+                <div class="story">
+                    <img src="./images/storyimg.jpg" alt="Story 3">
+                    <span>John</span>
+                </div>
+                <div class="story">
+                    <img src="./images/storyimg.jpg" alt="Story 4">
+                    <span>Mia</span>
+                </div>
+                <div class="story">
+                    <img src="./images/storyimg.jpg" alt="Story 4">
+                    <span>Mia</span>
+                </div>
+                <div class="story">
+                    <img src="./images/storyimg.jpg" alt="Story 4">
+                    <span>Mia</span>
+                </div>
+                <!-- more story cards... -->
+            </div>
+
+            <div id="feed">
+                <div class="cont-name">
+                    <img src="./images/images.png" class="profile" alt="Profile">
+                    <span>Roshan Gurung</span>
+                </div>
+                <div class="content" id="content">
+                    <video controls>
+                        <source src="movie.mp4" type="video/mp4">
+                        <source src="movie.ogg" type="video/ogg">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
         </section>
 
 
-        <section id="right-sidebar" class="sidebar">
+        <aside id="right-sidebar" class="sidebar">
             <div id="top-content">
                 <span class="item" id="cnt-txt">contacts</span>
                 <div class="item item-icon"><i data-lucide="search"></i></div>
@@ -114,22 +153,22 @@
             </div>
             <div class="contacts">
                 <div class="cont-name">
-                    <img src="images.png" alt="" class="profile">
+                    <img src="./images/images.png" alt="" class="profile">
                     <span>user1</span>
                 </div>
-                <div class="cont-name"><img src="images.png" alt="" class="profile">
+                <div class="cont-name"><img src="./images/images.png" alt="" class="profile">
                     <span>user2</span>
                 </div>
                 <div class="cont-name">
-                    <img src="images.png" alt="" class="profile">
+                    <img src="./images/images.png" alt="" class="profile">
                     <span>user3</span>
                 </div>
                 <div class="cont-name">
-                    <img src="images.png" alt="" class="profile">
+                    <img src="./images/images.png" alt="" class="profile">
                     <span>user4</span>
                 </div>
                 <div class="cont-name">
-                    <img src="images.png" alt="" class="profile">
+                    <img src="./images/images.png" alt="" class="profile">
                     <span>user5</span>
                 </div>
             </div>

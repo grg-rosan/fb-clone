@@ -3,93 +3,86 @@ nav {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     gap: 2rem;
-    padding: .5rem 0;
-    padding-top: 1.3rem;
-    /* border:1px solid black; */
+    padding: .3rem 0;
+    border-bottom: 1px solid #ccc;
+
 }
 
 .wrapper {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    border: 1px solid black;
-    /* padding: .5rem 0; */
-}
-
-.nav-icons {
-    /* display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: calc(var(--height) + .3rem);
-    height: calc(var(--height) + .3rem);
-    border-radius: .2rem;
-    cursor: pointer;
-    flex: 0 0 auto;
-    transition: all 0.3s ease; */
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height:100%;
-    cursor: pointer;
-    position: relative;
-    transition: background 0.2s ease;
-}
-
-.nav-icons:hover {
-    background: rgba(157, 153, 153, 0.792);
-}
-
-/* style the lucide icon inside the fb-logo */
-.nav-icon i[data-lucide],
-.nav-icon svg {
-  width: 1.5rem;
-  height: .5rem;
-  stroke-width: 2;
-  color: #65676b;
-}
-
-#fb-logo i[data-lucide],
-#fb-logo svg {
-    color: var(--accent);
-    stroke: currentColor;
-    fill: currentColor;
+    /* border: 1px solid black; */
+    height: var(--height);
 }
 
 /* search bar: container & layout */
-.search-bar {
+#left-wrapper{
+    width: 100%;
+    justify-content: flex-start;
+    gap: .8rem;
+}
+.fb-logo {
+  width:2.5rem; /* or use var(--fb-size) */
+  height:2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.fb-logo svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.left-search-bar {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
     background: var(--input-bg);
-    /* padding: .25rem .5rem; */
+    padding: .25rem .5rem;
     border-radius: 2rem;
-    height: var(--height);
-    flex: 1 1 auto;
+    gap: .4rem;
+    height: var(--height)-.8rem;
+    flex: 1 1 .5;
     /* take remaining space */
-    min-width: 0;
     /* important so input can shrink */
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.03) inset;
 }
-
 /* input styling */
-.search-bar input[type="text"] {
-    border: 0;
+.left-search-bar input[type="text"] {
+    border: none;
     outline: none;
     background: transparent;
     font-size: 0.95rem;
     color: #111;
-    /* width: 100%; */
-    /* min-width: 0; */
+    width: 100%;
+    min-width: 0;
     /* allow to shrink */
-    padding: 0 4px;
+    padding: 0 .2rem;
 }
-
-/* placeholder color */
 .search-bar input::placeholder {
     color: var(--muted);
     opacity: 1;
 }
+#right-wrapper {
+display: flex;
+align-items: center;
+justify-content: flex-end;
+gap: .5rem;
+
+}
+#right-wrapper .nav-icons {
+    height: 100%;
+    width: 2.5rem;
+    background: rgba(220, 218, 218, 0.627);
+    border-radius: 50%;
+}
+#right-wrapper .nav-icons:hover{
+    background-color: var(--muted);
+}
+
+
 
 #middle-wrapper {
     display: grid;
@@ -97,16 +90,41 @@ nav {
     align-items: center;
     justify-content: center;
     width: 100%;
-    border-bottom: 1px solid #ccc;
 }
-
-#right-wrapper {
+.nav-icons {
     display: flex;
-    justify-content: flex-end;
-    gap: .6rem;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    border-radius: .3rem;
+    transition: background 0.2s ease;
+}
+.nav-icons:hover {
+    background: rgba(157, 153, 153, 0.792);
+}
+.nav-icon.active i {
+  color: #1877f2; /* Facebook blue */
 }
 
-#right-wrapper .nav-icons {
-    background: rgba(220, 218, 218, 0.627);
-    border-radius: 50%;
+/* blue underline for active */
+.nav-icon.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 50%;             /* underline width */
+  height: 3px;
+  background: var(--fb-blue);
+  border-radius: 2px;
 }
+/* style the lucide icon inside the fb-logo */
+.nav-icon i[data-lucide],
+.nav-icon svg {
+  width: var(--icon-width);
+  height: var(--icon-heigt);
+  stroke-width: 2;
+  color: #65676b;
+}
+
