@@ -63,8 +63,8 @@
 .sidebar
 {
   position: sticky;
-  top: 0; /* sticks to top */
-  height: 100%;
+  top:3.5rem; /* sticks to top */
+  height: calc(100vh - 3.5rem);
   overflow-y: auto; /* optional: scroll inside sidebar if content is long */
 }
 
